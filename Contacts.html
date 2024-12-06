@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Number System Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(math2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        header {
+            background-color:#1F2937;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #4B5563;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color:white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: grey;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+        background-color: #333;
+         color: white;
+         padding: 10px;
+         text-align: center;
+         position: relative; /* Change from fixed to relative */
+         width: 100%;
+         bottom: 0;
+
+}
+
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Contacts.html">Contacts</a>
+    </nav>
+
+    <div class="main-content">
+        <h2>Get in Touch</h2>
+
+        <section>
+            <h3>Contact Information</h3>
+            <p>If you have any questions or would like more information, feel free to reach out to us.</p>
+            <p><strong>Email:</strong> <a href="mailto:zyllechris2005abejero@gmail.com">zyllechris2005abejero@gmail.com</a></p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Address:</strong> 1234 Main St, City, Country</p>
+        </section>
+
+        <section>
+            <h3>Send Us a Message</h3>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Your Message" rows="4"></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

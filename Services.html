@@ -1,0 +1,243 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Number System Converter</title>
+</head>
+<body>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(math2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    background-color: #1F2937;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color:#4B5563;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h3 {
+    margin-top: 0;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input,
+.calculator select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.calculator p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 100%;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+    }
+
+    .calculator {
+        width: 100%;
+    }
+}
+
+
+</style>
+    <!-- Header Section -->
+    <header>
+        <h1>SERVICES</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="Homepage.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="Services.html" class="active">SERVICES</a>
+        <a href="Contacts.html">CONTACT</a>
+    </nav>
+
+    <!-- Main Content for Services Page -->
+    <div class="main-content">
+        <h2>Number System Converter Calculator - Services</h2>
+
+        <section class="intro">
+            <p>Our Number System Converter Calculator helps you convert numbers effortlessly between different number systems such as binary, decimal, hexadecimal, and octal.</p>
+            <p>Whether you're a student, programmer, or engineer, this tool simplifies your daily work with numbers.</p>
+        </section>
+
+        <section class="features">
+            <h3>Features</h3>
+            <ul>
+                <li>Convert between Binary, Octal, Decimal, and Hexadecimal.</li>
+                <li>Instant and accurate results.</li>
+                <li>User-friendly interface with real-time conversions.</li>
+                <li>Perfect for students, developers, and professionals working with numbers.</li>
+            </ul>
+        </section>
+
+        <section class="use-cases">
+            <h3>Use Cases</h3>
+            <p>This tool is designed for:</p>
+            <ul>
+                <li><strong>Students</strong>: Learn and practice number systems.</li>
+                <li><strong>Programmers</strong>: Convert between various number bases for coding and debugging.</li>
+                <li><strong>Engineers</strong>: Work with different base systems for data encoding and computation.</li>
+            </ul>
+        </section>
+
+        <section class="interactive-demo">
+            <h3>Try the Interactive Demo</h3>
+            <p>Use the calculator below to convert numbers between different number systems:</p>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <label for="numberInput">Enter a Number:</label>
+                    <input type="text" id="numberInput" placeholder="e.g., 1010 or 255">
+
+                    <label for="baseInput">Input Base:</label>
+                    <select id="baseInput">
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="10" selected>Decimal</option>
+                        <option value="16">Hexadecimal</option>
+                    </select>
+
+                    <label for="baseOutput">Convert To:</label>
+                    <select id="baseOutput">
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="10">Decimal</option>
+                        <option value="16">Hexadecimal</option>
+                    </select>
+
+                    <p id="result">Converted Value: </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <p>Here are some common questions about the Number System Converter:</p>
+            <ul>
+                <li><strong>Q: What is the difference between Binary and Hexadecimal?</strong><br>
+                    A: Binary is a base-2 system, while Hexadecimal is base-16. Both are used in computing but for different purposes.
+                </li>
+                <li><strong>Q: Can I use this tool for large numbers?</strong><br>
+                    A: Yes! The tool supports very large numbers in all the available number systems.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+     function convertNumber() {
+    const input = document.getElementById('numberInput').value;
+    const baseInput = parseInt(document.getElementById('baseInput').value);
+    const baseOutput = parseInt(document.getElementById('baseOutput').value);
+    const resultElement = document.getElementById('result');
+
+    try {
+        if (input.trim() === '') {
+            resultElement.innerText = 'Converted Value: ';
+            return;
+        }
+
+        const decimalValue = parseInt(input, baseInput);
+        if (isNaN(decimalValue)) {
+            throw new Error('Invalid input number for the selected base.');
+        }
+        const convertedValue = decimalValue.toString(baseOutput).toUpperCase();
+        resultElement.innerText = `Converted Value: ${convertedValue}`;
+    } catch (error) {
+        resultElement.innerText = `Error: ${error.message}`;
+    }
+}
+
+// Attach event listeners to inputs and selectors
+document.getElementById('numberInput').addEventListener('input', convertNumber);
+document.getElementById('baseInput').addEventListener('change', convertNumber);
+document.getElementById('baseOutput').addEventListener('change', convertNumber);
+
+
+    </script>
+</body>
+</html>

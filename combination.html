@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website with Number System Converter</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(math2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #1F2937;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .header-text {
+            text-align: center;
+            flex-grow: 1;
+            color: white;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+        }
+
+        nav {
+            background-color: #4B5563;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 25px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #6B7280;
+            color: white;
+        }
+
+        .head {
+            display: flex;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .main-content {
+            flex: 70%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-right: 10px;
+            color: #1F2937;
+            border-radius: 8px;
+        }
+
+        .video-container {
+            background-color: rgba(75, 85, 99, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-container h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: #F9FAFB;
+        }
+
+        .sidebar-container {
+            flex: 20%;
+            background-color: #374151;
+            padding: 20px;
+            color: #F9FAFB;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .calculator {
+            background-color: #F3F4F6;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator input,
+        .calculator select {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .calculator p {
+            font-size: 1.2em;
+            color: #111827;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #1F2937;
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .head {
+                flex-direction: column;
+            }
+
+            .sidebar-container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-text">
+                <h1>My Website</h1>
+                <p>Welcome to my homepage</p>
+            </div>
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+    </header>
+
+    <nav>
+        <a href="Homepage.html">HOME</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Services.html" class="active">SERVICES</a>
+        <a href="Contacts.html">CONTACT</a>
+    </nav>
+
+    <div class="head">
+        <div class="main-content">
+            <h2>Welcome to My Number System Calculator Converter!</h2>
+            <p>This calculator is designed to save you time and effort when working with number systems. No more manual conversions or complex formulas—simply input a number, choose your base, and instantly get the converted value in the format you need. Whether you're writing code, solving math problems, or encoding data, this tool makes conversions quick, simple, and error-free. Take advantage of this powerful tool for all your number system needs!</p>
+        </div>
+
+        <div class="video-container">
+            <h3>Introduction to Number Systems</h3>
+            <video id="myVideo" controls>
+                <source src="Number Systems Introduction - Decimal, Binary, Octal .mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="sidebar-container">
+            <h3>Number System Converter</h3>
+            <div class="calculator">
+                <label for="numberInput">Enter a Number:</label>
+                <input type="text" id="numberInput" placeholder="e.g., 1010 or 255">
+
+                <label for="baseInput">Input Base:</label>
+                <select id="baseInput">
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="10" selected>Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+
+                <label for="baseOutput">Convert To:</label>
+                <select id="baseOutput">
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="10">Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+
+                <p id="result">Converted Value: </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function convertNumber() {
+            const input = document.getElementById('numberInput').value;
+            const baseInput = parseInt(document.getElementById('baseInput').value);
+            const baseOutput = parseInt(document.getElementById('baseOutput').value);
+            const resultElement = document.getElementById('result');
+
+            try {
+                if (input.trim() === '') {
+                    resultElement.innerText = 'Converted Value: ';
+                    return;
+                }
+
+                const decimalValue = parseInt(input, baseInput);
+                if (isNaN(decimalValue)) {
+                    throw new Error('Invalid input number for the selected base.');
+                }
+                const convertedValue = decimalValue.toString(baseOutput).toUpperCase();
+                resultElement.innerText = `Converted Value: ${convertedValue}`;
+            } catch (error) {
+                resultElement.innerText = `Error: ${error.message}`;
+            }
+
+            window.onload = function () {
+                const video = document.querySelector('video');
+                if (video) {
+                    video.play();
+                }
+            };
+        }
+
+        // Attach event listeners to inputs and selectors
+        document.getElementById('numberInput').addEventListener('input', convertNumber);
+        document.getElementById('baseInput').addEventListener('change', convertNumber);
+        document.getElementById('baseOutput').addEventListener('change', convertNumber);
+    </script>
+</body>
+
+</html>
